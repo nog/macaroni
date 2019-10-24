@@ -79,7 +79,7 @@ Metrics have two values as below.
 
 `MACKEREL_TARGET`: A target (Mackerel Host or Service) to post metrics. (required)
 
-- `host:[HostID]` Post a report as host metrics. HostID is optional. When it is not specified (`MACKEREL_TARGTE=host:`), HostID is determined by mackerel-agent config.
+- `host:[HostID]` Post a report as host metrics. HostID is optional. When it is not specified (`MACKEREL_TARGET=host:`), HostID is determined by mackerel-agent config.
 - `service:[ServiceName]` Post a report as service metrics. ServiceName is required.
 
 When `MACKEREL_TARGET` is empty, Mackerel reporter becomes to disabled.

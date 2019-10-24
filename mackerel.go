@@ -107,6 +107,10 @@ func reportToMackerel(report *horenso.Report, conf *MackerelConfig) error {
 		log.Printf("[info] post service metrics to %s", conf.Service)
 		return client.PostServiceMetricValues(conf.Service, values)
 	}
+	if conf.HostID != "" {
+		log.Printf("[info] post host metrics to host:%s", conf.HostID)
+		return client.PostHostMetricValuesByHostID(conf.HostID, values)
+	}
 
 	return nil
 }
